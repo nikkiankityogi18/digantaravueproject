@@ -77,7 +77,9 @@ export default {
             placeholder="Search..."
             @change="updateSeachRoute"
           />
-          <span class="absolute top-12 right-32 w-6">
+          <span
+            class="absolute top-12 right-16 sm:right-24 md:right-28 lg:right-32 w-6"
+          >
             <router-link :to="'/search?search=' + searchQuery"
               ><img src="/search-icon.png"
             /></router-link>
@@ -88,7 +90,7 @@ export default {
         <select
           @change="updateCountryRoute"
           v-model="selectedOption1"
-          class="border border-gray-300 rounded px-4 py-2 w-1/4"
+          class="border border-gray-300 rounded sm:px-4 py-2 w-1/4"
         >
           <option>Country</option>
           <option
@@ -102,7 +104,7 @@ export default {
         <select
           @change="updateOrbitRoute"
           v-model="selectedOption2"
-          class="border border-gray-300 rounded px-4 py-2 w-1/4"
+          class="border border-gray-300 rounded sm:px-4 py-2 w-1/4"
         >
           <option>Orbit</option>
           <option v-for="orbit in orbitData" :key="country" :value="orbit">
@@ -112,7 +114,7 @@ export default {
         <select
           @change="updateObjectRoute"
           v-model="selectedOption3"
-          class="border border-gray-300 rounded px-4 py-2 w-1/4"
+          class="border border-gray-300 rounded sm:px-4 py-2 w-1/4"
         >
           <option>Object-type</option>
           <option
